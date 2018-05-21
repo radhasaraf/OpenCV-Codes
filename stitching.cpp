@@ -28,10 +28,8 @@ stich second image to first.
 using namespace cv;
 using namespace std;
 
-Mat crop(Mat transformed_image);
 vector<Point> get_Size(Mat next_image, Mat Homo);
 Mat Homography_from_images(Mat image1, Mat image2);
-//vector<Point> Size_of_transformed_image(Mat image2, Mat Homography);
 
 int main(int argc, char** argv)
 {	
@@ -101,16 +99,16 @@ int main(int argc, char** argv)
 	imshow("image1", image1);
 	/*
 	///Stitching
-    // Mat mosaic = zeros(height,width,CV_8UC3); gives error: ‘zeros’ was not declared in this scope
-    Mat mosaic = Mat::zeros(height,width,CV_8UC3);
+    	// Mat mosaic = zeros(height,width,CV_8UC3); gives error: ‘zeros’ was not declared in this scope
+   	 Mat mosaic = Mat::zeros(height,width,CV_8UC3);
 	image1.copyTo(mosaic);
    	imshow("mosaic", mosaic);
 	*/
 	/*
-    //Display mosaic
-    if(!mosaic.empty())
-    {
-    imshow("Mosaic", mosaic);
+    	//Display mosaic
+    	if(!mosaic.empty())
+    	{
+    	imshow("Mosaic", mosaic);
 	}
 	*/
 	waitKey(0);
